@@ -35,7 +35,7 @@ width: 50px;
 }
 .valkotek {
 color: white;
-font-family:Gloria Hallelujah, cursive;
+font-family:Gochi Hand, cursive;
 padding: 0px;
 user-select: none;
 
@@ -50,18 +50,19 @@ cursor: pointer;
 }
 
 h1 {
-font-family: Indie Flower, bold;
-color:white;
+font-family: Bangers, bold;
+color:red;
 margin: 50px 200px 100px 0;
+font-size: 70px;
 } 
 
 h2 {
-font-family:Indie Flower, bold;
+font-family:Gochi Hand, cursive;
 color:white;
 }
 
 .otsikot {
-font-family:Gloria Hallelujah, cursive;
+font-family:Gochi Hand, cursive;
 color: white;
 }
 
@@ -82,7 +83,7 @@ textarea{
 	text-align: center;
 	border-radius: 10px;
 	border:solid;
-	color: white;
+	color: black;
 	margin: 20px 20px 20px 20px;
 
 #message{
