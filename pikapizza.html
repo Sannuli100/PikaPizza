@@ -2,30 +2,31 @@
 
 <link href="CSS/tarkastapizza.css" type"text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Bangers|Gochi+Hand" rel="stylesheet">
+
 <head>
     <title></title>
 <script>
 
 	function TARKASTA()
 {
-var etunimi = document.forms["tarjouspyynto"]["etunimi"];
-var sukunimi = document.forms["tarjouspyynto"]["sukunimi"];
+var asno = document.forms["tarjouspyynto"]["asno"];
+var nimi = document.forms["tarjouspyynto"]["nimi"];
 var puhelin = document.forms["tarjouspyynto"]["puhelin"];
 var email = document.forms["tarjouspyynto"]["email"];
 
 
 
-if (etunimi.value == "")
+if (asno.value == "")
 {
-	window.alert("Ole hyv\u00E4, ja anna etunimesi.");
-	etunimi.focus();
+	window.alert("Ole hyv\u00E4, ja anna asiakasnumerosi.");
+	asno.focus();
 	return false;
 }
 
-if (sukunimi.value == "")
+if (nimi.value == "")
 {
-	window.alert("Ole hyv\u00E4, ja anna sukunimesi.");
-	sukunimi.focus();
+	window.alert("Ole hyv\u00E4, ja anna nimesi.");
+	nimi.focus();
 	return false;
 }
 
@@ -101,7 +102,7 @@ return true;
 
 <div><img id="pizza" src="kuvat/pizza.jpg" alt="logo"><span id="otsikko"></span>
 <h1><u> PikaPizza</u> </h1></div>
-<form name="tarjouspyynto" action="" onsubmit="return TARKASTA()" method="post">
+<form name="tarjouspyynto" action="tilaaja.php" onsubmit="return TARKASTA()" method="GET">
 <table border=1>
 	<tr>
 			<th colspan="2">
@@ -110,18 +111,18 @@ return true;
 		</tr>
 		<tr>
 			<td class="otsikot">
-				Etunimi:
+				Asiakasnumerosi:
 			</td>
 			<td>
-				<input type="text" name="etunimi" id="etunimi" value="" placeholder="Anna etunimi">
+				<input type="text" name="asno" id="asno" value="" placeholder="Anna asiakasnumerosi">
 			</td>
 		</tr>
 		<tr>
 			<td class="otsikot">
-				Sukunimi:
+				Nimi:
 				</td>
 				<td>
-					<input type="text" name="sukunimi" id="sukunimi" value="" placeholder="Anna sukunimi">
+					<input type="text" name="nimi" id="nimi" value="" placeholder="Anna nimesi">
 				</td>
 		</tr>
 		<tr>
@@ -176,12 +177,5 @@ return true;
 	</tr>
 	</table>
 	</form>
-	
-	
-	
-
-		
-
-
-</body>
+	</body>
 </html>
