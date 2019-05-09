@@ -1,0 +1,61 @@
+﻿
+body {
+background-image: url("pizza.jpg");
+background-color: black;
+}
+
+div {
+	width: 1200px;
+	height: 650px;
+	border-style: double;
+	border-width: thick;
+	border-color: #3d3d29;
+	
+}
+
+.no_width {
+width: 50px;
+}
+.valkotek {
+color: white;
+font-family:Gochi Hand, cursive;
+padding: 0px;
+user-select: none;
+
+}
+
+.valkotek:hover {
+cursor: pointer;
+}
+
+h1 {
+font-family: Bangers, bold;
+color:red;
+margin: 50px 200px 50px 0;
+font-size: 70px;
+text-align: center;
+} 
+
+h2 {
+font-family:Gochi Hand, cursive;
+color:white;
+float:left;
+
+}
+
+
+#pizza_slize {
+	height: 300px;
+	float: left;
+	margin: 5px 0 0 90px;
+	
+	
+}
+#auto {
+	vertical-align:middle;
+	float:center;
+	margin: 0 0 50px 5px;
+}
+span {
+	vertical-align:middle;
+}

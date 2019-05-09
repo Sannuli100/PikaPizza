@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+
+<link href="CSS/tarkastapizzaeric.css" type"text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bangers|Gochi+Hand" rel="stylesheet">
+<script src="script/pikapizza_javascript.js" type="text/javascript"></script>
+<head>
+    <title>PikaPizza</title>
+
+</head>
+<body>
+
+<div><img id="pizza" src="kuvat/pizza.jpg" alt="logo"><span id="otsikko"></span>
+<h1><u> PikaPizza</u> </h1></div>
+<form name="pizzatilaus" action="tilaaja.php" onsubmit="return TARKASTA()" method="GET">
+<table border=2>
+	<tr>
+			<th colspan="2">
+				<h2> Asiakkaan tiedot </h2>
+			</th>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Asno:
+			</td>
+			<td>
+				<input type="text" name="etunimi" id="etunimi" value="" placeholder="Anna etunimi">
+			</td>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Nimi:
+				</td>
+				<td>
+					<input type="text" name="sukunimi" id="sukunimi" value="" placeholder="Anna sukunimi">
+				</td>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Puhelinnumero:
+				</td>
+				<td>
+					<input type="text" name="puhelin" id="puhelin" value="" placeholder="Anna puhelinnumero">
+				</td>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Sähköpostiosoite:
+				</td>
+				<td>
+					<input type="text" name="email" id="email" value="" placeholder="Anna sähköpostiosoite">
+				</td>
+	</tr>
+	<tr>
+					<!-- @@@@ Pizza menu @@@@ -->
+
+		<td class="otsikot">
+			Pizzat:
+			</td>
+		<td>
+		<ul>
+		<li>
+		<img id="pizzake" src="kuvat/kinkku.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v1" min="0" max="10" value="0" />
+		<label for="kinkkupizza" class="pizzaotsikko">Kinkkupizza</label>
+		<input type="radio" name="radio1" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio1" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Kinkku</p></li>
+		
+		<li>
+		<img id="pizzake" src="kuvat/salami.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v2" min="0" max="10" value="0" />
+		<label for="salamipizza" class="pizzaotsikko">Salamipizza</label>
+		<input type="radio" name="radio2" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio2" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Salami</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/joku_pizza.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v3" min="0" max="10" value="0" />
+		<label for="tonnikalapizza" class="pizzaotsikko">Tonnikalapizza</label>
+		<input type="radio" name="radio3" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio3" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Tonnikala</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/lihapulla.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v4" min="0" max="10" value="0" />
+		<label for="jauhelihapizza" class="pizzaotsikko">Jauhelihapizza</label>
+		<input type="radio" name="radio4" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio4" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Jauheliha</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/ananaspizza-pizza-ananas-kinkku.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v5" min="0" max="10" value="0" />
+		<label for="americano" class="pizzaotsikko">Americano</label>
+		<input type="radio" name="radio5" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio5" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Ananas, Kinkku</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/ruma_pizza.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v6" min="0" max="10" value="0" />
+		<label for="francescana" class="pizzaotsikko">Francescana</label>
+		<input type="radio" name="radio6" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio6" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Herkkusieni, Kinkku</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/lehti_pizza.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v7" min="0" max="10" value="0" />
+		<label for="opera" class="pizzaotsikko">Opera</label>
+		<input type="radio" name="radio7" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio7" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Kinkku, Tonnikala</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/oliivi_sieni_kinkku.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v8" min="0" max="10" value="0" />
+		<label for="romano" class="pizzaotsikko">Romano</label>
+		<input type="radio" name="radio8" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio8" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Herkkusieni, Salami</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/ruotsalainen_pizza.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v9" min="0" max="10" value="0" />
+		<label for="tango" class="pizzaotsikko">Tango</label>
+		<input type="radio" name="radio9" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio9" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Banaani, Salami</p></li>
+
+		<li>
+		<img id="pizzake" src="kuvat/oliivi_sieni_kinkku.jpg" alt="kuva"><span id="otsikko">
+		<input type="number" id="v10" min="0" max="10" value="0" />
+		<label for="superpizza" class="pizzaotsikko">Superpizza</label>
+		<input type="radio" name="radio10" value="normaali"><span class="valkotek">Normaali </span>
+		<input type="radio" name="radio10" value="perhe"><span class="valkotek">Perhe </span>
+		<p>Sisältää: Kinkku, Pekoni, Salami</p></li>
+		</td>
+	</tr>
+					<!-- @@@@ Menu loppuu @@@@ -->
+
+	<div class=valkotek>
+<tr>
+	<td class="otsikot">
+				Lisätäytteet:
+	</td>
+	<td>
+	ul style="list-style-type:none;">
+		<li><input type="checkbox" name="oregano" id="oregano" value="Oregano"><label for="oregano"class="valkotek""bold">Oregano</label></li>
+		<li><input type="checkbox" name="tupjuu" id="tupjuu" value="tupjuu"><label for="valkotek"class="valkotek">Tuplajuusto</label></li>
+		<li><input type="checkbox" name="extrajuu" id="extrajuu" value="extrajuu"><label for="valkotek"class="valkotek">Extrajuusto</label></li>
+		<li><input type="checkbox" name="valkosip" id="valkosip" value="valkosip"><label for="valkotek"class="valkotek">Valkosipuli</label></li>
+		<li><input type="checkbox" name="extrasip" id="extrasip" value="extrasip"><label for="valkotek"class="valkotek">Extravalkosipuli</label></li>
+		<br>
+		</ul>
+	</td>
+
+	</tr>
+</div>
+				<tr>
+		
+					<td class="otsikot">
+					Lisätiedot:
+					</td>
+					<td>
+						<textarea name="comment" id="comment" rows="5" cols="50">
+						</textarea>
+					</td>
+				</tr>
+		
+
+		<!-- -->
+	
+				<table border=1>
+					<tr>
+						<td class="otsikot">Toimitustapa:</td>
+					</tr>
+	
+	
+					<tr>
+						<td class="otsikot"><input type="radio" id="nouto" onclick="myFunction2()" value="Nouto" name="toimitus">Nouto</td>
+					</tr>
+					<tr>
+						<td class="otsikot"><input type="radio" id="vienti" onclick="myFunction()" value="Kuljetus" name="toimitus">Kuljetus</td>
+					</tr>
+		
+
+
+
+					<tr id="toimitus" style="display:none">
+		
+							<td class="otsikot">Toimitusosoitteen yhteystiedot:</td>
+					
+		
+							<td><input type="text" id="kulpaikka" name="kulpaikka" placeholder="Paikka"><br>
+							<input type="text" id="kullahios" name="kullahios" placeholder="Katuosoite"><br>
+							<input type="text" id="kulpostino" name="kulpostino" placeholder="Postinumero"><br>
+							<input type="text" id="kulpostitp" name="kulpostitp" placeholder="Postitoimipaikka"><br>
+							<input type="text" id="kulpuhelin" name="kulpuhelin" placeholder="Puhelinnumero"><br>
+							<input type="text" id="kulyhthen" name="kulyhthen" placeholder="Yhteyshenkilö"></td>
+					</tr>
+				</table>
+
+			<!-- -->
+	<tr>
+		<td></td>
+			<td><input type="submit" name="submit" value="L&auml;het&auml;" class="nappi"  /></td>
+			
+	</tr>
+	</table>
+	</form>
+	
+	
+	
+
+		
+
+
+</body>
+</html>

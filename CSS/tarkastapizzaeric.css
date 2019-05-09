@@ -1,6 +1,5 @@
 ﻿
 body {
-background-image: url("pizza.jpg");
 background-color: black;
 }
 
@@ -23,8 +22,8 @@ border-radius: 10px;
 padding: 3px;
 background-color: white;
 }
-
 input[type=checkbox] {
+
 padding: 20px;
 border: 0;
 vertical-align: middle;
@@ -33,12 +32,24 @@ vertical-align: middle;
 .no_width {
 width: 50px;
 }
+
 .valkotek {
 color: white;
 font-family:Gochi Hand, cursive;
 padding: 0px;
 user-select: none;
 }
+
+.pizzaotsikko {
+text-decoration:underline;
+text-underline-position:under;
+color: #006600;
+font-family:Bangers, cursive;
+padding: 0px;
+user-select: none;
+}
+
+
 .valkotek:hover {
 cursor: pointer;
 }
@@ -72,6 +83,16 @@ color: white;
 	float: left;
 	margin: 0 0 0 20px;
 }
+#pizzake {
+	border: 3px;
+	margin: 5px 15px -5px 0;
+
+}
+
+#v1,#v2, #v3, #v4, #v5, #v6, #v7, #v8, #v9,#v10 {
+	border-radius: 10px;
+	text-align:right;
+}
 
 textarea{
 	text-align: center;
@@ -79,9 +100,20 @@ textarea{
 	border:solid;
 	color: black;
 	margin: 20px 20px 20px 20px;
-}
+ }
 #message{
 	margin: 20px 0 0 0;
 	padding: 10px 30px;
 	float: right;
+}
+
+p {
+	color: grey;
+	font-family:Gochi Hand, cursive;
+	margin-block-start:4px;
+}
+
+input[type=number] {
+	margin-right: 10px;
+	width: 35px;
 }
