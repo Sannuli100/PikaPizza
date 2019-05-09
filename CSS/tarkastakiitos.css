@@ -5,31 +5,14 @@ background-color: black;
 }
 
 div {
-box-sizing: border-box;
-width: 100%;
-float: left;
-align-content: center;
-align-items: center;
-}
-form {
-margin: 20px;
-width: 600px;
-background: black;
+	width: 1200px;
+	height: 650px;
+	border-style: double;
+	border-width: thick;
+	border-color: #3d3d29;
+	
 }
 
-input[type=text] {
-width: 400px;
-border-radius: 10px;
-padding: 3px;
-background-color: white;
-}
-input[type=checkbox] {
-
-padding: 20px;
-border: 0;
-vertical-align: middle;
-
-}
 .no_width {
 width: 50px;
 }
@@ -48,7 +31,7 @@ cursor: pointer;
 h1 {
 font-family: Bangers, bold;
 color:red;
-margin: 50px 200px 100px 0;
+margin: 50px 200px 50px 0;
 font-size: 70px;
 text-align: center;
 } 
@@ -56,15 +39,23 @@ text-align: center;
 h2 {
 font-family:Gochi Hand, cursive;
 color:white;
-text-align: center;
-float:right;
-margin: 0 700px 0 0;
+float:left;
+
 }
 
 
 #pizza_slize {
 	height: 300px;
-	float: middle;
-	margin: 0 0 0 50px;
+	float: left;
+	margin: 5px 0 0 90px;
 	
+	
+}
+#auto {
+	vertical-align:middle;
+	float:center;
+	margin: 0 0 50px 5px;
+}
+span {
+	vertical-align:middle;
 }
