@@ -1,0 +1,186 @@
+﻿
+<!DOCTYPE html>
+
+<link href="CSS/tarkastapizza.css" type"text/css" rel="stylesheet">
+<link href="CSS/tarkastapizzaeric.css" type"text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bangers|Gochi+Hand" rel="stylesheet">
+<script src="Scripts/pikapizzajs.js" type="text/javascript"></script>
+<script src="Scripts/tarkasta.js" type="text/javascript"></script>
+<script src="Scripts/ostoskori.js" type="text/javascript"></script>
+
+<head>
+    <title>PikaPizza</title>
+</head>
+<body>
+<div><img id="pizza" src="kuvat/pizza.jpg" alt="logo"><span id="otsikko"></span>
+<h1><u> PikaPizza</u> </h1></div>
+<form name="pikapizza" action="tilaaja.php" onsubmit="return TARKASTA()" method="GET">
+<table border=1>
+	<tr>
+			<th colspan="2">
+				<h2> Asiakkaan tiedot </h2>
+			</th>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Asiakasnumerosi:
+			</td>
+			<td>
+				<input type="text" name="asno" id="asno" value="" placeholder="Anna asiakasnumerosi">
+			</td>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Nimi:
+				</td>
+				<td>
+					<input type="text" name="nimi" id="nimi" value="" placeholder="Anna nimesi">
+				</td>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Puhelinnumero:
+				</td>
+				<td>
+
+					<input type="text" name="puhelin" id="puhelin" value="" placeholder="Anna puhelinnumero">
+				</td>
+		</tr>
+		<tr>
+			<td class="otsikot">
+				Sähköpostiosoite:
+				</td>
+				<td>
+					<input type="text" name="email" id="email" value="" placeholder="Anna sähköpostiosoite">
+				</td>
+	</tr>
+					<!-- @@@@ Pizza menu @@@@ -->
+			<td class="otsikot">
+			Pizzat:
+			</td>
+		<td>
+		<ul>
+
+		<li>
+		<img id="pizzake" src="kuvat/kinkku.jpg" alt="kuva"><span id="otsikko">
+		<label or="kinkkupizza" class="valkotek">Kinkkupizza</label>
+		<input type="checkbox" id="pizza1" class="pizza" value="pizza1">
+		<p>Sisältää:Kinkku</p>
+		<p id="p1h"class="hinta" value="7,90" >Hinta 7,90€</p>
+		<div id="checkdiv">
+		<p>Pizza määrä</p>
+		<input type="number" id="pizqnt" class="maara" min="0" max="100"><br><br>
+		<p>Lisätäytteet</p>
+		<input type="checkbox" class="oregano" id="oregano" value="Oregano"><label for="oregano"class="valkotek""bold">Oregano</label><br>
+		<input type="checkbox" class="tupjuu" id="tupjuu" value="tupjuu"><label for="valkotek"class="valkotek">Tuplajuusto</label><br>
+		<input type="checkbox" class="valkosip" id="valkosip" value="valkosip"><label for="valkotek"class="valkotek">Valkosipuli</label><br>
+		<br><button type="button" id="korisend2">Lisää ostoskoriin</button><br><br><br>
+		</div
+		</li>
+
+		<li>
+		<img id="pizzake" src="kuvat/salami.jpg" alt="kuva"><span id="otsikko">
+		<label for="salamipizza" class="valkotek">Salamipizza</label>
+		<input type="checkbox" id="pizza2" class="pizza" value="pizza2">
+		<p>Sisältää: Salami</p>
+		<p id="p2h"class="hinta" value="7,90" >Hinta: 7.90€</p>
+		<div id="checkdiv">
+		<p>Pizza määrä</p>
+		<input type="number" id="pizqnt" class="maara" min="0" max="100"><br>
+		<p>Lisätäytteet</p>
+		<input type="checkbox" class="oregano" id="oregano" value="Oregano"><label for="oregano"class="valkotek""bold">Oregano</label><br>
+		<input type="checkbox" class="tupjuu" id="tupjuu" value="tupjuu"><label for="valkotek"class="valkotek">Tuplajuusto</label><br>
+		<input type="checkbox" class="valkosip" id="valkosip" value="valkosip"><label for="valkotek"class="valkotek">Valkosipuli</label><br>
+		<br><button type="button" id="korisend2">Lisää ostoskoriin</button><br><br><br>
+		</div>
+		</li>
+
+		
+		<li>
+		<img id="pizzake" src="kuvat/joku_pizza.jpg" alt="kuva"><span id="otsikko">
+		<label for="tonnikalapizza" class="valkotek">Tonnikalapizza</label>
+		<input type="checkbox" id="pizza3" class="pizza" value="pizza3">
+		<p>Sisältää: Tonnikala</p>
+		<p id="p3h"class="hinta" value="7,90" >Hinta: 7.90€</p>
+		<div id="checkdiv">
+		<p>Pizza määrä</p>
+		<input type="number" id="pizqnt" class="maara" min="0" max="100"><br>
+		<p>Lisätäytteet</p>
+		<input type="checkbox" class="oregano" id="oregano" value="Oregano"><label for="oregano"class="valkotek""bold">Oregano</label><br>
+		<input type="checkbox" class="tupjuu" id="tupjuu" value="tupjuu"><label for="valkotek"class="valkotek">Tuplajuusto</label><br>
+		<input type="checkbox" class="valkosip" id="valkosip" value="valkosip"><label for="valkotek"class="valkotek">Valkosipuli</label><br>
+		<br><button type="button" id="korisend3">Lisää ostoskoriin</button><br><br><br>
+		</div>
+		</li>
+		
+		<li>
+		<img id="pizzake" src="kuvat/lihapulla.jpg" alt="kuva"><span id="otsikko">
+		<label for="jauhelihapizza" class="valkotek">Jauhelihapizza</label>
+		<input type="checkbox" id="pizza4" class="pizza" value="pizza4">
+		<p>Sisältää: Jauheliha</p>
+		<p id="p4h"class="hinta" value="7,90" >Hinta: 7.90€</p>
+		<div id="checkdiv">
+		<p>Pizza määrä</p>
+		<input type="number" id="pizqnt" class="maara" min="0" max="100"><br>
+		<p>Lisätäytteet</p>
+		<input type="checkbox" class="oregano" id="oregano" value="Oregano"><label for="oregano"class="valkotek""bold">Oregano</label><br>
+		<input type="checkbox" class="tupjuu" id="tupjuu" value="tupjuu"><label for="valkotek"class="valkotek">Tuplajuusto</label><br>
+		<input type="checkbox" class="valkosip" id="valkosip" value="valkosip"><label for="valkotek"class="valkotek">Valkosipuli</label><br>
+		<br><button type="button" id="korisend4">Lisää ostoskoriin</button><br><br><br>
+		</div>
+		</li>
+		</td>
+
+
+	
+
+					<!-- @@@@ Menu loppuu @@@@ -->
+
+<div class=valkotek>
+
+</div>
+				<tr>
+		
+					<td class="otsikot">
+					Lisätiedot:
+					</td>
+					<td>
+						<textarea name="comment" id="comment" rows="5" cols="50">
+						</textarea>
+					</td>
+				</tr>
+		
+
+		<!-- -->
+	
+				<table border=1>
+					<tr>
+						<td class="otsikot">Toimitustapa:</td>
+					</tr>
+					<tr>
+						<td class="otsikot"><input type="radio" id="nouto" onclick="myFunction2()" value="Nouto" name="toimitus">Nouto</td>
+					</tr>
+					<tr>
+						<td class="otsikot"><input type="radio" id="vienti" onclick="myFunction()" value="Kuljetus" name="toimitus">Kuljetus</td>
+					</tr>
+							<tr id="toimitus" style="display:none">
+		
+							<td class="otsikot">Toimitusosoitteen yhteystiedot:</td>
+     						<td><input type="text" id="kulpaikka" name="kulpaikka" placeholder="Paikka"><br>
+							<input type="text" id="kullahios" name="kullahios" placeholder="Katuosoite"><br>
+							<input type="text" id="kulpostino" name="kulpostino" placeholder="Postinumero"><br>
+							<input type="text" id="kulpostitp" name="kulpostitp" placeholder="Postitoimipaikka"><br>
+							<input type="text" id="kulpuhelin" name="kulpuhelin" placeholder="Puhelinnumero"><br>
+							<input type="text" id="kulyhthen" name="kulyhthen" placeholder="Yhteyshenkilö"></td>
+					</tr>
+				</table>
+
+			<!-- -->
+	<tr>
+		<td></td>
+			<td><input type="submit" name="submit" value="L&auml;het&auml;" class="nappi"  /></td>
+	</tr>
+	</table>
+	</form>
+</body>
+</html>

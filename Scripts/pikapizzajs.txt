@@ -1,0 +1,19 @@
+function myFunction() {
+  var radio = document.getElementById("vienti");
+  var text = document.getElementById("toimitus");
+  if (radio.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+function myFunction2() {
+  var radio = document.getElementById("nouto");
+  var text = document.getElementById("toimitus");
+  if (radio.checked == true){
+    text.style.display = "none";
+  } else {
+     text.style.display = "block";
+  }
+
+}
